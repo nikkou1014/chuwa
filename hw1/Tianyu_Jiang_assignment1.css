@@ -22,12 +22,13 @@ h2 {
   font-size: 0.8rem;
 }
 
-#students td, #students th {
+#students td,
+#students th {
   border: 1px solid #ddd;
   padding: 8px;
 }
 
-#students tr:nth-child(even){
+#students tr:nth-child(even) {
   background-color: #f2f2f2;
 }
 
