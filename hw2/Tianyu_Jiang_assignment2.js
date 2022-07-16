@@ -10,18 +10,9 @@ const itemsObject = [
 console.log("#1-1");
 
 function double(items) {
-  const newItemsObject = [];
-
-  items.forEach((item) => {
-    const newItem = new Object();
-
-    newItem.quantity = 2 * item.quantity;
-    newItem.price = 2 * item.price;
-
-    newItemsObject.push(newItem);
+  return items.map((item) => {
+    return { quantity: 2 * item.quantity, price: 2 * item.price };
   });
-
-  return newItemsObject;
 }
 
 console.log(double(itemsObject));
