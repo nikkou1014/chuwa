@@ -1,0 +1,52 @@
+body {
+  margin: auto;
+  width: 50%;
+}
+
+.section {
+  margin: 30px auto;
+}
+
+/* 1 */
+#students {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 0.8rem;
+}
+
+#students td,
+#students th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#students tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+#students tr:hover {
+  background-color: #ddd;
+}
+
+#students th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+}
+
+/* 3 */
+select {
+  width: 120px;
+  height: 30px;
+  padding: 0 3px;
+}
+
+option {
+  /* display: block; */
+  background-color: #666;
+  color: white;
+}
+
+option:checked {
+  background-color: dodgerblue;
+}
