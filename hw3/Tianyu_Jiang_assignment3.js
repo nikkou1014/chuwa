@@ -131,17 +131,19 @@ section1.append(table);
 let tableHeader = $("<tr></tr>");
 table.append(tableHeader);
 
-tableInfo.tableHeader.map((header) => {
+let ths = tableInfo.tableHeader.map((header) => {
   tableHeader.append($("<th></th>").text(header));
 });
+tableHeader.append(...ths);
 
 tableInfo.tableContent.map((student) => {
   let tr = $("<tr></tr>");
   table.append(tr);
 
-  Object.keys(student).map((key) => {
-    tr.append($("<td></td>").text(student[key]));
+  let tds = Object.keys(student).map((key) => {
+    return $("<td></td>").text(student[key]);
   });
+  tr.append(...tds);
 });
 
 // 2.
@@ -151,16 +153,18 @@ section1.after(section2);
 let ol = $("<ol></ol>");
 section2.append(ol);
 
-list.map((lang) => {
-  ol.append($("<li></li>").text(lang));
+let langs = list.map((lang) => {
+  return $("<li></li>").text(lang);
 });
+ol.append(...langs);
 
 let ul = $("<ul></ul>");
 section2.append(ul);
 
-list.map((lang) => {
-  ul.append($("<li></li>").text(lang));
+let langs2 = list.map((lang) => {
+  return $("<li></li>").text(lang);
 });
+ul.append(...langs2);
 
 // 3.
 let section3 = $("<div class='section section3'></div>");
@@ -172,7 +176,8 @@ section3.append(dropdown);
 let select = $("<select class='cities'></select>");
 dropdown.append(select);
 
-dropDownList.map((option) => {
-  select.append($("<option></option>").val(option.value).text(option.content));
+let options = dropDownList.map((option) => {
+  return $("<option></option>").val(option.value).text(option.content);
 });
+select.append(...options);
 */
